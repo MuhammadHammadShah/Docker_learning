@@ -1,0 +1,7 @@
+
+
+Kubernetes in action      old book
+The kubernetees book     nigel Poulton and pushkar Joglekar   2024 edition
+
+
+docker deep dive

@@ -1,0 +1,20 @@
+keep the syntax
+
+
+Dockerfile                      #filename for docker
+FROM python:3.12                 #baseImage 
+RUN pip install poetry           #install
+
+
+
+                                         # no one allows to use poetry etc so we have to download python first and then by using python os we can use poetry
+
+WORKDIR/code                      #work folder
+COPY . /code                      #codebase
+RUN poetry install         
+
+CMD ["uvicorn" , "run", "app.main:app", "--host=0.0.0.0", "--reload"]
+
+
+See this link for docker setup etc.
+https://github.com/panaverse/learn-generative-ai/blob/main/05_microservices_all_in_one_platform/14_docker/02_containerization/Dockerfile.dev
