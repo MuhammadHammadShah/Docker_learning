@@ -13,3 +13,6 @@ docker run -d --name dev-cont1 -p 8000:8000 my-dev-image
 
 first (left_hand_side) 8000 is port of "HOST" "LAPTOP"  >>>>>>> we can change it
 second(right_hand_side) 8000 is port of "CONTAINER"   >>>>>>> we cannot change it
+
+
+watch here why container is not showing live_terminal like poetry_fastapi    >>>    https://youtu.be/94KPnrkjB5I?t=1610

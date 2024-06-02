@@ -16,5 +16,44 @@ RUN poetry install
 CMD ["uvicorn" , "run", "app.main:app", "--host=0.0.0.0", "--reload"]
 
 
+<<<CODE>>>>
+
+docker build -t ImageName:tag .
+docker run -d -p 8000:8000 ImageName:tag
+docker images
+docker ps 
+docker ps -a
+
+
+
+
 See this link for docker setup etc.
 https://github.com/panaverse/learn-generative-ai/blob/main/05_microservices_all_in_one_platform/14_docker/02_containerization/Dockerfile.dev
+
+
+Docker_hub is the place where application are stored for docker mean   "docker run hello-world"    download the hello-world from docker_hub , where the hello-world was created by someone and stored there.
+
+
+In docker we say "image" to "code" and running the code, we will say container
+
+
+CMD>>> startup command to start app.
+
+
+
+this command is used to excute the "commands written in file "Dockerfile.dev"    IN REPO (FOR_EXAMPLE) https://github.com/panaverse/learn-generative-ai/tree/main/05_microservices_all_in_one_platform/14_docker/02_containerization >>>> we have a file "Dockerfile.dev". In this file everything is a layer. When we run the file it started creating layers.
+
+
+																																		/      \
+																																	       /   ||   \
+                                       																														   ||
+docker build                             -f                                                      Dockerfile.dev                                 -t                                                    my-dev-image                 .            ||
+
+   ||||||||    ||||                             |||||                                                            |||||||||||||                                          |||                                                              ||||||                       |||||||||
+
+  utility   create image     filename(next to it)                 (filename(created with -f)             tag( give some name next to it )         get the name(from -t)         the file is on the current location where this command is coming from 
+
+
+https://youtu.be/eRbtrOIIP3k?t=7760    "very important words are here about building"
+
+after completing creation it has no labels because our code is only build(image is created) , and cmd will use when we run the code
